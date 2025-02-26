@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body style="background:#f0f1f2">
+	<div class="row justify-content-center mt-5" >
+	<div class="px-4 col col-md-4" style="border:1px solid #f0f1f2;  background : white">
+
+	<form class="d-grid mt-4" th:action="@{/user}" method="post" th:object="${b}">
+	<p class="display-4">Create New Customer Account</p>
+	<label class="form-label" for="firstName">First Name</label>
+	<input type= "text" id="firstName" name="firstName" placeholder="Put your first Name here to get started" class="mb-3 form-control" />
+	<label class="form-label" for="middleName">Middle Name</label>
+	<input type= "text" id="middleName" name="middleName" placeholder="Put your Middle Name here to get Started" class="mb-3 form-control" />
+	<label class="form-label" for="lastName">Last Name</label>
+	<input type= "text" id="lastName" name="lastName" placeholder="Put your Last Name here to get started" class="mb-3 form-control" />
+	<div class="form-check-inline">
+	<label class="form-check-label" for="gender">Gender :&nbsp;&nbsp;&nbsp;&nbsp;</label>
+	<input type= "radio" id="gender" name="gender" value="Male" class="form-check-input" />
+	
+	<label class="form-check-label" for="gender">Male</label>
+	<input type="radio" id="gender" name="gender" value="Female" class="form-check-input" />
+	<label class="form-check-label" for="gender">Female</label>
+	</div>
+	<label class="form-label" for="address">Address</label>
+	<input type= "text" id="address" name="address" class="mb-3 form-control" />
+	<label class="form-label" for="state">State</label>
+	<input type= "text" id="state" name="state" class="mb-3 form-control" />
+	<label class="form-label" for="email">Email</label>
+	<input type= "email" id="email" name="email" class="mb-3 form-control" />
+	<label class="form-label" for="phoneNumber">Phone Number</label>
+	<input type= "tel" id="phoneNumber" name="phoneNumber" class="mb-3 form-control" />
+	<label class="form-label" for="alternatePhoneNumber">Alternate Phone Number</label>
+	<input type= "tel" id="alternatePhoneNumber" name="alternatePhoneNumber" class="mb-3 form-control" />
+	<button type="submit" class="mb-4 btn btn-outline-danger">Submit</button>
+	</form>
+
+	</div>
+	</div>
+</body>
+</html>
